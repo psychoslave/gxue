@@ -1,0 +1,26 @@
+# Instali ruby-2.6.0-preview2
+
+## Kun rvm
+```sh
+# Eble necesas aliajn preparojn
+rvm install 2.6.0-preview2
+```
+
+## Kun rbenv
+se vi uzas `rbenv`:
+
+```sh
+cd ~/.rbenv/plugins/ruby-build && git pull && cd -
+rbenv install 2.6.0-preview2
+rbenv local 2.6.0-preview2
+gem install bundle
+```
+
+# Instali Ĝue
+
+FARENDA
+```sh
+bundle install
+pry -r"./teko/ĝue.rb"
+# Ĝuu
+```
