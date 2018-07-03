@@ -5,11 +5,6 @@ module Ĝue
   # sen krei senfinan rikuran vokon
   alias sendu send
 
-  # Farenda: komprenu kial +alias mistrafe method_missing+ ne sufiĉas
-  def method_missing(ago, *lokatoj, &bloko)
-    mistrafe(ago, *lokatoj, &bloko)
-  end
-
   # Pravas trovi taŭga identigila vokado por la provizitaj kunvokatoj
   def mistrafe(ago, *lokatoj, &bloko)
     case ago
@@ -20,6 +15,7 @@ module Ĝue
       super
     end
   end
+  alias method_missing mistrafe
 
   # Provizas ojon de vokeblaj agoj, kiuj kongruas kun la nomo de +ago+
   #
