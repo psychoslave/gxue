@@ -5,16 +5,17 @@ module Ĝue
   # sen krei senfinan rikuran vokon
   alias sendu send
 
-  # Farenda: komprenu kial +alias mankakapta method_missing+ ne sufiĉas
+  # Farenda: komprenu kial +alias mistrafea method_missing+ ne sufiĉas
   def method_missing(ago, *lokatoj, &bloko)
-    mankakapte(ago, *lokatoj, &bloko)
+    mistrafee(ago, *lokatoj, &bloko)
   end
 
   # Pravas trovi taŭga identigila vokado por la provizitaj kunvokatoj
-  def mankakapte(ago, *lokatoj, &bloko)
+  def mistrafee(ago, *lokatoj, &bloko)
     case ago
     when /u$/
-      responda?(ago) ? sendu(kongruigoj(ago).first, *lokatoj, &bloko) : super
+    # ivu agon ? sendu unua-kongruige-agon je *lokatoj plu &bloko : super
+      iva?(ago) ? sendu(kongruigoj(ago).first, *lokatoj, &bloko) : super
     else
       super
     end
@@ -30,8 +31,8 @@ module Ĝue
     ebloj.select{|ero| eval("defined? #{ero}") == 'method'}
   end
 
-  alias responda? respond_to?
-  def responda?(ago, pleninklude=false)
+  alias iva? respond_to?
+  def iva?(ago, pleninklude=false)
     ago.to_s =~ /u$/ ? !kongruigoj(ago)&.empty? : super
   end
 end
