@@ -5,13 +5,13 @@ module Ĝue
   # sen krei senfinan rikuran vokon
   alias sendu send
 
-  # Farenda: komprenu kial +alias mistrafea method_missing+ ne sufiĉas
+  # Farenda: komprenu kial +alias mistrafe method_missing+ ne sufiĉas
   def method_missing(ago, *lokatoj, &bloko)
-    mistrafee(ago, *lokatoj, &bloko)
+    mistrafe(ago, *lokatoj, &bloko)
   end
 
   # Pravas trovi taŭga identigila vokado por la provizitaj kunvokatoj
-  def mistrafee(ago, *lokatoj, &bloko)
+  def mistrafe(ago, *lokatoj, &bloko)
     case ago
     when /u$/
     # ivu agon ? sendu unua-kongruige-agon je *lokatoj plu &bloko : super
