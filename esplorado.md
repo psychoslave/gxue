@@ -21,3 +21,12 @@ https://github.com/rahulraj/virtual_keywords
     end
 ```
 
+- [Misc #12722: Localizing Ruby](https://bugs.ruby-lang.org/issues/12722)
+- [Feature #9319: Add constant RUBY_KEYWORDS or a similar way to output which keywords exist at runtime](https://bugs.ruby-lang.org/issues/9319)
+- [Class: Ripper (Ruby 2.0.0)](https://ruby-doc.org/stdlib-2.0.0/libdoc/ripper/rdoc/Ripper.html) ivas disleksigilon
+- [alias keyword](https://groups.google.com/forum/#!topic/xruby-devel/XtllQwsQwtA)
+- [rexical](https://github.com/tenderlove/rexical)
+- [Where are keywords defined in Ruby?](https://stackoverflow.com/questions/9446150/where-are-keywords-defined-in-ruby)
+- [RubyScript - A transcompiler transforming a subset of Ruby to JavaScript](https://gist.github.com/txus/2017173)
+- [ParseTree](https://rubygems.org/gems/ParseTree/versions/3.0.9)
+- [RubyInline](https://rubygems.org/gems/RubyInline)
