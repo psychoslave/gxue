@@ -1,11 +1,16 @@
+class Module
+  alias_method :alivoke, :alias_method
+end
+
 module Ĝue
 
   # Eĉ se tra la sekva +method_missing+ difino +sendu+ jam estos aliaso de
   # +send+, la sekvanta ordono estas necesa por uzi ĝin en +method_missing+ mem
   # sen krei senfinan rikuran vokon
-  alias sendu send
+  alivoke :sendu, :send
 
   # Pravas trovi taŭga identigila vokado por la provizitaj kunvokatoj
+  #alivoke :mistrafe, :method_missing
   def mistrafe(ago, *lokatoj, &bloko)
     case ago
     when /u$/
@@ -15,7 +20,9 @@ module Ĝue
       super
     end
   end
-  alias method_missing mistrafe
+  alivoke :method_missing, :mistrafe
+
+  # alias method_missing mistrafe
 
   # Provizas ojon de vokeblaj agoj, kiuj kongruas kun la nomo de +ago+
   #
