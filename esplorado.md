@@ -30,3 +30,4 @@ https://github.com/rahulraj/virtual_keywords
 - [RubyScript - A transcompiler transforming a subset of Ruby to JavaScript](https://gist.github.com/txus/2017173)
 - [ParseTree](https://rubygems.org/gems/ParseTree/versions/3.0.9)
 - [RubyInline](https://rubygems.org/gems/RubyInline)
+- [Creating a REPL](https://dev.to/joshcheek/write-a-repl-in-ruby)
