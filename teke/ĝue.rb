@@ -11,7 +11,7 @@ module Ĝue
 
   # Pravas trovi taŭga identigila vokado por la provizitaj kunvokatoj
   #alivoke :mistrafe, :method_missing
-  def mistrafe(ago, *lokatoj, &bloko)
+  def method_missing(ago, *lokatoj, &bloko)
     case ago
     when /u$/
     # ivu agon ? sendu unua-kongruige-agon je *lokatoj plu &bloko : super
@@ -20,9 +20,7 @@ module Ĝue
       super
     end
   end
-  alivoke :method_missing, :mistrafe
-
-  # alias method_missing mistrafe
+  alivoke :mistrafe, :method_missing
 
   # Provizas ojon de vokeblaj agoj, kiuj kongruas kun la nomo de +ago+
   #
