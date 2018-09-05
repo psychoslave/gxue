@@ -20,7 +20,8 @@ gem install bundle
 
 FARENDA
 ```sh
+gem install bundler
 bundle install
-pry -r"./teko/ĝue.rb"
+pry -r "./teke/ĝue.rb"
 # Ĝuu
 ```
